@@ -7,9 +7,11 @@ from bs4 import BeautifulSoup
 with open('fraud_zips.csv', 'w+') as csvfile:
 	writer = csv.writer(csvfile)
 	writer.writerow(['Postcode', '1P_fraud', '3P_fraud', 'Population'])
-	
 
-zips = ['NW61PJ', 'EC2Y9AZ', 'E27HR', 'WD64NS']
+with open('/Users/jermaine/Downloads/uk_zips.csv', 'r') as f:
+	zips = []
+	for row in csv.reader(f, delimiter=',', quoting=csv.QUOTE_NONE):
+			zips += row
 
 def fraud_data(postcode):
 	payload = {'ps':postcode}
