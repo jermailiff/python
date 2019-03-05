@@ -21,7 +21,7 @@ def fraud_data(postcode):
 	with open('fraud_zips.csv', 'a') as csvfile:
 		writer = csv.writer(csvfile)
 		writer.writerow(rs)
-	sleep(2)
+	sleep(0.1)
 	
 	
 map(fraud_data, zips)
