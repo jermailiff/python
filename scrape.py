@@ -8,7 +8,7 @@ with open('fraud_zips.csv', 'w+') as csvfile:
 	writer = csv.writer(csvfile)
 	writer.writerow(['Postcode', '1P_fraud', '3P_fraud', 'Population'])
 
-with open('/Users/jermaine/Documents/python/final_eng_zips', 'r') as f:
+with open('/Users/jermaine/Documents/python/final_eng_zips.csv', 'r') as f:
 	zips = []
 	for row in csv.reader(f, delimiter=',', quoting=csv.QUOTE_NONE):
 			zips += row
